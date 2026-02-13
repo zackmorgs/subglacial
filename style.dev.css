@@ -1,0 +1,930 @@
+/*
+Theme Name: subglacial
+Theme URI: https://ashbringermusic.com/
+Author: Zack Morgenthaler
+Author URI: https://zackmorgenthaler.com/
+Description: A custom WordPress theme for the band Ashbringer. Heavy, melodic, and dark.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ashbringer
+*/
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.home .main-content {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-weight: 400;
+    color: #8d8d8d;
+}
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    background: #0a0a0a;
+    color: #f1f1f1;
+    margin: 0;
+
+}
+
+.album-cover {
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+    display: block;
+    margin: 1rem auto 0;
+
+}
+
+
+.w-full {
+    display:block;
+    width: 100%;
+    margin:0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.wp-theme-ashbringermusiccom {
+    position: relative;
+}
+
+.frame {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.body-bg {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    overflow: hidden;
+    z-index: 0;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+#nav_main {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(180deg, black, transparent);
+    backdrop-filter: blur(1px);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    img {
+        height: 3rem;
+        filter: drop-shadow(1px 1px 0px rgb(0 0 0)) drop-shadow(-1px -1px 0px rgb(0 0 0)) drop-shadow(3px 0px 0px rgb(0 0 0));
+    }
+}
+
+#nav_toggle * {
+    unicode-bidi: isolate;
+}
+
+.hamburger {
+    background: #101010;
+    font: inherit;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    height: 56px;
+}
+
+.hamburger.is-active .hamburger-inner,
+.open .hamburger .hamburger-inner:after,
+.open .hamburger .hamburger-inner:before {
+    background-color: #f1f1f1;
+}
+
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.hamburger-inner {
+    transition: transform 75ms cubic-bezier(.55, .055, .675, .19) .15s, background-color 0s linear 75ms;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    /* border-radius: 4px; */
+    background-color: #fff;
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+}
+
+.open .hamburger--stand .hamburger-inner:before {
+    top: 0;
+    transition: top 75ms ease-out .1s, transform 75ms cubic-bezier(.215, .61, .355, 1) .15s;
+    transform: rotate(-45deg);
+    background-color: #fff;
+}
+
+.open .hamburger--stand .hamburger-inner:after {
+    bottom: 0;
+    transition: bottom 75ms ease-out .1s, transform 75ms cubic-bezier(.215, .61, .355, 1) .15s;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    /* border-radius: 4px; */
+    background-color: #fff;
+}
+
+.hamburger-inner:before {
+    top: -10px;
+}
+
+.hamburger-inner:after {
+    bottom: -10px;
+}
+
+.open #nav_toggle {
+    border-radius: 0.5rem;
+}
+
+.open #nav_toggle span:nth-child(1) {
+    transform: rotate(45deg) translateY(0.5rem);
+}
+
+.open #nav_toggle span:nth-child(2) {
+    transform: rotate(-45deg) translateY(0.5rem);
+}
+
+.hamburger-inner {
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+    transition: transform 75ms cubic-bezier(.55, .055, .675, .19) .15s, background-color .5s linear 75ms, width 1s ease-in-out;
+}
+
+.open .hamburger-inner {
+    background: transparent;
+    width: 0px;
+}
+
+#nav_links {}
+
+.open #nav_links {
+    position: absolute;
+    right: 0;
+    left: 0;
+    box-shadow: 0px 0px 1rem #0000007d;
+    /* background: #0a0a0a; */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.open .nav-list {
+    height: auto;
+    background: #101010;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: white;
+    font-size: 1.25rem;
+    /* letter-spacing: 1pt; */
+    display: block;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1.0), -1px -1px 0px rgba(0, 0, 0, 1.0);
+    background: #101010e0;
+
+    &:visited {
+        color: white;
+    }
+
+    &.active {
+        background: #00000078;
+        /* color:#0a0a0a;
+        text-shadow:none; */
+    }
+}
+
+.hero {
+    padding: 2rem 1rem 1rem;
+}
+
+#hero_main {
+    margin: 1rem 1rem 0;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-content {
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+    h2,
+    h3 {
+        text-shadow: -1px -1px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+        text-align: center;
+        margin: 0;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .logo {
+        display: block;
+        filter: drop-shadow(1px 1px 0px rgb(0 0 0)) drop-shadow(-1px -1px 0px rgb(0 0 0)) drop-shadow(3px 0px 0px rgb(0 0 0));
+    }
+}
+
+
+
+.btn,
+#submit,
+.wp-element-button,
+.comment-reply-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #f1f1f1;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 2rem;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0);
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    font-family: "Barlow", sans-serif;
+    text-shadow: none;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-primary {
+    background-color: #29c103;
+    color: #181818;
+    min-width: 12ch;
+}
+
+#press_list,
+.btn-group {
+    padding: 1rem;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    li {
+        display: block;
+        margin:0 auto;
+        margin-top:1rem;
+    }
+}
+
+
+
+.btn-social {
+    background: #181818;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 9ch;
+
+    .icon-x {
+        filter: invert();
+    }
+}
+
+.content {
+    padding: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.icon {
+    display: inline-block;
+    width: auto;
+    height: 2rem;
+}
+
+#main_social {
+    /* background: linear-gradient(0deg, black, transparent); */
+    z-index: 1;
+    position: relative;
+    backdrop-filter: blur(1px);
+
+    /* margin-right:-1rem;
+    margin-left: -1rem; */
+    h3 {
+        margin: 0;
+    }
+
+    .content {
+        background: transparent;
+        padding-top: 0;
+    }
+}
+
+#content_press {
+    margin-bottom: 1rem;
+
+    .content {
+        background: #0a0a0a;
+        padding: 1rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+#press_list {
+    animation: scroll-left 10s linear infinite;
+    padding: 0;
+    height: auto;
+
+
+    a {
+        padding: 1rem;
+    }
+}
+
+.overflow-container {
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1.0), -1px -1px 0px rgba(0, 0, 0, 1.0);
+    /* background: rgba(0, 0, 0, 0.75); */
+    backdrop-filter: blur(2px);
+
+
+}
+
+a {
+    color: #0f6bff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#footer_main {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    display: block;
+
+    .content {
+        margin-bottom: 0;
+    }
+}
+
+.hidden-sm {
+    display: none;
+}
+
+.content {
+    background: #0a0a0a;
+    padding: 1rem 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+.release:hover {
+    cursor: pointer;
+}
+
+#featured_release {
+
+    .release img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.merch:hover {
+    cursor: pointer;
+}
+
+#featured_merch {
+    margin: 1rem auto;
+
+    .merch {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        filter: saturate(0.0);
+    }
+}
+
+.post-list {
+    margin: 0rem 1rem;
+}
+
+.post-list a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.post.content {
+    margin: 1rem auto 1rem;
+}
+
+.post {
+
+    h2,
+    h1 {
+        color: #dbc553;
+
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .meta,
+    .post_date {
+        font-size: 0.875rem;
+        color: #8d8d8d;
+
+    }
+
+    .post_author {
+        color: #8d8d8d;
+        font-weight: 400;
+    }
+
+    .cat-links a {
+        color: #0f6bff;
+        text-decoration: none;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+}
+
+.required-field-message {
+    display: block;
+}
+
+.required-field-message,
+.required {
+    color: #a92c2c;
+}
+
+#comment {}
+
+#comment,
+#author,
+#email,
+#url {
+    font-size: 1.25rem;
+    font-family: "IM Fell English", serif;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem #0000007d;
+    border: none;
+        background: #141414;
+    color: #f1f1f1;
+}
+
+.commentlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #141414;
+    color: #b8b8b8;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem #0000007d;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.fn {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.vcard .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.comment-awaiting-moderation {
+    color: white;
+
+    background: #646464;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.comment-meta a {
+    font-size: 0.875rem;
+    color: #1167eb;
+    margin-top: 0.5rem;
+    display:block;
+}
+
+#content_contact {
+    .content {
+        text-align: center;
+    }
+
+    .wp-block-button {
+        margin: 0 auto;
+    }
+}
+
+.text-center .btn,
+.text-center .wp-block-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.single .content {
+    margin: 0 auto;
+    max-width: 56ch;
+    border-radius:0.5rem;
+}
+
+@media (min-width: 414px) {
+    .hidden-sm {
+        display: block;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    #main_social .content,
+    .hero-content {
+        max-width: 45ch;
+        margin: 0 auto;
+    }
+
+    #content_press {
+        background: #0a0a0a;
+    }
+
+    #press_list {
+        .icon {
+            width: auto;
+            height: 3.5rem;
+        }
+    }
+
+    #press_list li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #event_services {
+        text-align: center;
+    }
+
+    .btn,
+    .comment-reply-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        /* margin:1rem auto; */
+        text-align: center;
+    }
+
+    .md\:row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .md\:bg-black {
+        position: relative;
+        z-index: 1;
+        background: #0a0a0a;
+    }
+
+    #featured_release,
+    #featured_merch {
+        width: 50%;
+    }
+
+    #featured_merch {
+        margin-top: 0;
+
+        .merch {
+            aspect-ratio: 1 / 1;
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #content_press,
+    #featured,
+    #content_spotify,
+    #content_bandcamp,
+    #apple_music,
+    #content_deezer,
+    #event_services,
+    #event_content,
+    #content_contact .content,
+    #press_kit_content .content,
+    .post.content {
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .nav-link {
+        background:none;
+        text-shadow:none;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    #logo {
+        transition: transform 1s ease-in-out;
+    }
+
+    #logo:hover {
+        transform: rotate(360deg);
+    }
+
+    #logo:active {
+        transform: scale(0.95);
+    }
+
+    .nav-link {
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: #f6d503d9;
+        color: black;
+        text-shadow: none;
+    }
+
+    .nav-link:active {
+        transform: scale(0.95);
+    }
+
+    #press_list {
+        animation: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    #press_list {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .nav-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-bar {
+        background: none;
+    }
+
+    #nav_toggle {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        height: auto;
+        overflow: visible;
+        background: none;
+        padding: 0;
+        background: #0a0a0a;
+        border-radius: 0.5rem;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem;
+    }
+
+    #featured_release,
+    #featured_merch {
+        max-width: calc(1024px / 2);
+        margin: 0;
+    }
+
+    .main-content {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        max-width: 72ch;
+    }
+
+    #main_social .content {
+        max-width: 48ch;
+    }
+
+    #main_social {
+        background: none;
+    }
+
+    .single .content {
+        max-width: 36rem;
+        margin: 0 auto;
+    }
+    #press_list {
+        .icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .icon:hover {
+            transform:scale(1.05);
+        }
+    }
+     
+}
+
+@media (min-width: 1536px) {}
