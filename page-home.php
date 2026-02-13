@@ -17,7 +17,7 @@
     <section id="main_social">
         <div class="content text-center">
             <!-- <h3>Social</h3> -->
-            <ul class="btn-group">
+             <ul id="social_links" class="btn-group">
                 <li>
                     <a href="https://www.facebook.com/ashbringermusic" class="btn btn-social" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-fb.svg" alt="Facebook"
@@ -31,17 +31,34 @@
                             alt="Instagram" class="icon" />
                     </a>
                 </li>
+             </ul>
+            <!-- <h3>Listen</h3> -->
+            <ul id="listen_links" class="btn-group">
                 <li>
                     <a href="https://ashbringermusic.bandcamp.com" target="_blank" class="btn btn-social">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bandcamp_b&w.png"
                             alt="Bandcamp" class="icon" />
                     </a>
                 </li>
-            </ul>
-            <a href="https://www.youtube.com/@ashbringermusic" class="btn btn-social" target="_blank">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-youtube.svg" alt="YouTube"
+                <li>
+                    <a href="https://music.apple.com/us/artist/ashbringer/981151909" class="btn btn-social" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-apple-music.svg" alt="Apple Music" class="icon" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@ashbringermusic" class="btn btn-social" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-youtube.svg" alt="YouTube"
                     class="icon" />
-            </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.deezer.com/us/artist/7830050" class="btn btn-social" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-deezer.svg" alt="Deezer"
+                            class="icon" />
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </section>
     <section id="content_subglacial">

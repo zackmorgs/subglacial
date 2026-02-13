@@ -722,6 +722,19 @@ a {
 .gutena-forms-field {
     color: #f1f1f1;
 }
+#social_links.btn-group
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+#listen_links.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
 
 @media (min-width: 414px) {
     .hidden-sm {
@@ -846,7 +859,8 @@ a {
     .nav-link:hover,
     .nav-link.active {
         /* background: #f6d503d9; */
-        background: #5db5be;
+        /* background: #5db5be; */
+        background: #0d8ea5;
         color: black;
         text-shadow: none;
     }
