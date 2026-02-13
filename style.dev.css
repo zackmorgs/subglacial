@@ -719,6 +719,10 @@ a {
     background:#f1f1f1;
 }
 
+.gutena-forms-field {
+    color: #f1f1f1;
+}
+
 @media (min-width: 414px) {
     .hidden-sm {
         display: block;
