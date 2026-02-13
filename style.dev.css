@@ -722,6 +722,12 @@ a {
 .gutena-forms-field {
     color: #f1f1f1;
 }
+
+.btn.btn-deezer {
+    background:#f1f1f1;
+    color:#0a0a0a;
+}
+
 #social_links.btn-group
 {
     display: flex;
@@ -729,11 +735,11 @@ a {
     justify-content: center;
     gap: 1rem;
 }
-#listen_links.btn-group {
-    display: flex;
+#listen_links_2.btn-group {
+    display:flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    gap:1rem;
 }
 
 @media (min-width: 414px) {

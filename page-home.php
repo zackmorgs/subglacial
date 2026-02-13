@@ -33,7 +33,7 @@
                 </li>
              </ul>
             <!-- <h3>Listen</h3> -->
-            <ul id="listen_links" class="btn-group">
+            <ul id="listen_links_1" class="btn-group">
                 <li>
                     <a href="https://ashbringermusic.bandcamp.com" target="_blank" class="btn btn-social">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bandcamp_b&w.png"
@@ -44,15 +44,23 @@
                     <a href="https://music.apple.com/us/artist/ashbringer/981151909" class="btn btn-social" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-apple-music.svg" alt="Apple Music" class="icon" />
                     </a>
-                </li>
+                </li> 
                 <li>
                     <a href="https://www.youtube.com/@ashbringermusic" class="btn btn-social" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-youtube.svg" alt="YouTube"
                     class="icon" />
                     </a>
                 </li>
+            </ul>
+            <ul id="listen_links_2" class="btn-group">
                 <li>
-                    <a href="https://www.deezer.com/us/artist/7830050" class="btn btn-social" target="_blank">
+                    <a href="https://open.spotify.com/artist/4n9sHh7Xo2l8jLZtqQeXo" class="btn btn-social btn-spotify" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-spotify.svg" alt="Spotify"
+                            class="icon" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.deezer.com/us/artist/7830050" class="btn btn-social btn-deezer" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-deezer.svg" alt="Deezer"
                             class="icon" />
                     </a>
@@ -63,7 +71,7 @@
     </section>
     <section id="content_subglacial">
         <div class="content">
-            <h3 class="text-center">Out now! “Subglacial” released 2/13/2026 via Bolverk Records</h3>
+            <h2 class="text-center">SUBGLACIAL Available Now via Bolverk Records</h2>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/subglacial_cover.jpg" alt="Subglacial Album Cover"
                 class="album-cover" />
                 <br>
@@ -79,8 +87,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://ashbringermusic.bandcamp.com/album/subglacial" class="text-center btn btn-primary mx-auto" target="_blank">
-                        Get Vinyl, CD, and Merch
+                    <a href="https://ashbringermusic.bandcamp.com/merch" class="text-center btn btn-primary mx-auto" target="_blank">
+                        ORDER CDs, VINYL & WEARABLES HERE
                     </a>
                 </li>
             </ul>

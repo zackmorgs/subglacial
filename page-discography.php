@@ -5,18 +5,7 @@
     </div>
 </header>
 <main class="main-content">
-    <section id="subglacial">
-        <div class="content text-center">
-                <?php
-                if (have_posts()):
-                    while (have_posts()):
-                        the_post();
-                        the_content(); // This is the important line!
-                    endwhile;
-                endif;
-                ?>
-        </div>
-    </section>
+
     <section id="content_spotify">
         <div class="content text-center">
             <a href="https://open.spotify.com/artist/697R3cOlkWzOAkXztLzeg2?si=KjclXRwTTTOg53nKBpCcvw" target="_blank"
@@ -49,7 +38,7 @@
                     Ashbringer</a></iframe>
         </div>
     </section>
-    <section id="apple_music">
+    <!-- <section id="apple_music">
         <div class="content text-center">
             <a href="https://music.apple.com/us/artist/ashbringer/697R3cOlkWzOAkXztLzeg2" target="_blank" class="btn">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/logo-apple_music.svg" alt="Apple Music"
@@ -62,7 +51,7 @@
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                 src="https://embed.music.apple.com/us/album/vacant-2025-remaster/1806321477"></iframe>
         </div>
-    </section>
+    </section> -->
     <section id="content_deezer">
         <div class="content text-center">
             <a class="btn" href="https://www.deezer.com/us/artist/7830050">
@@ -71,6 +60,18 @@
             </a>
 
             <!-- <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/7830050/top_tracks" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe> -->
+        </div>
+    </section>
+        <section id="subglacial">
+        <div class="content text-center">
+                <?php
+                if (have_posts()):
+                    while (have_posts()):
+                        the_post();
+                        the_content(); // This is the important line!
+                    endwhile;
+                endif;
+                ?>
         </div>
     </section>
 </main>
