@@ -5,7 +5,7 @@
         <br />
         <ul class="btn-group">
             <li>
-                <a href="/listen" class="btn btn-primary">
+                <a href="/discography/" class="btn btn-primary">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/icon-play.svg" alt="Play"
                         class="icon" />
                 </a>
