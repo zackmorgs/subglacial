@@ -837,7 +837,8 @@ a {
 
     .nav-link:hover,
     .nav-link.active {
-        background: #f6d503d9;
+        /* background: #f6d503d9; */
+        background: #5db5be;
         color: black;
         text-shadow: none;
     }
