@@ -92,11 +92,8 @@
                     </a>
                 </li>
             </ul>
-           
             <br>
-           
             <br>
-            
             <br>
         </div>
     </section>
