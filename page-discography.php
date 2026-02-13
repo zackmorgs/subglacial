@@ -6,7 +6,7 @@
 </header>
 <main class="main-content">
     <section id="subglacial">
-        <div class="content">
+        <div class="content text-center">
                 <?php
                 if (have_posts()):
                     while (have_posts()):
