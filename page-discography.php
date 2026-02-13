@@ -7,7 +7,14 @@
 <main class="main-content">
     <section id="subglacial">
         <div class="content">
-            
+                <?php
+                if (have_posts()):
+                    while (have_posts()):
+                        the_post();
+                        the_content(); // This is the important line!
+                    endwhile;
+                endif;
+                ?>
         </div>
     </section>
     <section id="content_spotify">
